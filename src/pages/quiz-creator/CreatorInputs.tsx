@@ -1,5 +1,5 @@
 import React, {FC} from "react"
-import {data} from "@/pages/quiz-creator/data"
+import {data} from "@/data/data"
 import {Box, Input} from "@chakra-ui/react"
 import {FieldErrors, UseFormRegister} from "react-hook-form"
 import {Inputs} from "@/pages/quiz-creator/QuizCreator"
