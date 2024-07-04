@@ -2,7 +2,7 @@ import React, {FC} from "react"
 import {data} from "@/data/data"
 import {Box, Input} from "@chakra-ui/react"
 import {FieldErrors, UseFormRegister} from "react-hook-form"
-import {Inputs} from "@/pages/quiz-creator/QuizCreator"
+import {Inputs} from "@/my-pages/quiz-creator/QuizCreator"
 
 interface ICreatorInputs {
     register: UseFormRegister<Inputs>
