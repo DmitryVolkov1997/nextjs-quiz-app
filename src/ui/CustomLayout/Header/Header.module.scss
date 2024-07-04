@@ -1,0 +1,11 @@
+.header {
+  @apply relative top-0 left-0 right-0 px-4 flex z-20;
+}
+
+.row {
+  @apply flex justify-between items-center h-full;
+}
+
+.box {
+  @apply flex items-center gap-x-8;
+}

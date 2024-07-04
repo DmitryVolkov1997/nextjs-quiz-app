@@ -1,0 +1,7 @@
+.list {
+  @apply flex gap-x-6;
+}
+
+.link {
+  @apply text-xl hover:text-blue-600 transition-all;
+}

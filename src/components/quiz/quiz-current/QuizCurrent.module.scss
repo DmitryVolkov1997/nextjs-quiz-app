@@ -1,0 +1,11 @@
+.item {
+  @apply flex flex-col items-center;
+}
+
+.title {
+  @apply text-xl font-semibold;
+}
+
+.answer {
+  @apply flex items-center gap-x-4;
+}

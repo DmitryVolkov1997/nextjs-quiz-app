@@ -1,0 +1,11 @@
+.answer {
+  @apply flex items-center gap-x-3;
+}
+
+.text {
+  @apply text-green-600 text-center text-xl font-semibold my-2;
+}
+
+.row {
+  @apply flex items-center gap-x-4 justify-center;
+}

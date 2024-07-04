@@ -1,0 +1,7 @@
+.quiz {
+  @apply mt-52 max-w-3xl w-full rounded-md flex flex-col items-center p-6;
+}
+
+.title {
+  @apply italic mb-8;
+}
