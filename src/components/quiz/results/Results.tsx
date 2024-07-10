@@ -60,7 +60,7 @@ const Results: FC<Results> = ({results, quizLength}) => {
             </Box>
 
             <Box className={styles.row}>
-                <Button colorScheme="purple">
+                <Button colorScheme="purple" onClick={resetResults}>
                     <Link href="/">
                         Перейти в список тестов
                     </Link>
@@ -68,7 +68,7 @@ const Results: FC<Results> = ({results, quizLength}) => {
 
                 <Button
                     colorScheme="green"
-                    onClick={() => resetResults()}
+                    onClick={resetResults}
                 >
                     Повторить
                 </Button>

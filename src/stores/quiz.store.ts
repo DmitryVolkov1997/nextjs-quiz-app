@@ -1,11 +1,10 @@
 import {create} from "zustand"
-import {IQuiz} from "@/types/quiz.interfaces"
 
 export type Result = {
     question: string
-    isCorrect: boolean
     answer: string
     userAnswerId: number
+    isCorrect:boolean
 }
 
 type TypeQuizStore = {

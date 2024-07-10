@@ -7,6 +7,7 @@ import Link from "next/link"
 import HeaderList from "@/ui/CustomLayout/Header/HeaderList/HeaderList"
 import {FaRegMoon} from "react-icons/fa"
 import {LuSun} from "react-icons/lu"
+import {useQuizStore} from "@/stores/quiz.store"
 
 
 interface Header {
@@ -14,12 +15,13 @@ interface Header {
 
 const Header: FC<Header> = () => {
     const {colorMode, toggleColorMode} = useColorMode()
+    const {resetResults} = useQuizStore()
 
     return (
         <Box as="header" className={styles.header} boxShadow="md" h="70px">
             <Container className="h-full" maxWidth="8xl">
                 <Box className={styles.row}>
-                    <Link href="/">
+                    <Link href="/" onClick={resetResults}>
                         <MdSchool size={55}/>
                     </Link>
 

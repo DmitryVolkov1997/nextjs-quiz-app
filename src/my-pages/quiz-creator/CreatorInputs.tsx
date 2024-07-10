@@ -7,13 +7,17 @@ import {Inputs} from "@/my-pages/quiz-creator/QuizCreator"
 interface ICreatorInputs {
     register: UseFormRegister<Inputs>
     errors: FieldErrors<Inputs>
+    isQuizLength: boolean
 }
 
-const CreatorInputs: FC<ICreatorInputs> = ({register, errors}) => {
+const CreatorInputs: FC<ICreatorInputs> = ({register, errors, isQuizLength}) => {
     return (
         <>
             {
                 data.map((el, index) => {
+                    if (isQuizLength && el.name === 'name') {
+                        return
+                    }
                     return (
                         <Box key={index} className="mb-4">
                             <Input

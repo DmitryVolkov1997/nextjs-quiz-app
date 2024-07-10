@@ -63,7 +63,7 @@ const QuizCreator: FC<QuizCreator> = () => {
 
         const name = quizzes[0].quizName
         if (name) {
-            mutation.mutate({ name, questions: quizzes })
+            mutation.mutate({name, questions: quizzes})
             setQuizzes([])
         }
     }
@@ -79,7 +79,11 @@ const QuizCreator: FC<QuizCreator> = () => {
                     </Heading>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <CreatorInputs register={register} errors={errors}/>
+                        <CreatorInputs
+                            register={register}
+                            errors={errors}
+                            isQuizLength={!!quizzes.length}
+                        />
 
                         <Options register={register}/>
 

@@ -10,14 +10,15 @@ interface QuizSelectors {
 }
 
 const QuizSelectors: FC<QuizSelectors> = ({data: quizzes}) => {
+
     return (
         <Box className={styles.box}>
             {
-                quizzes && Object.keys(quizzes).map((key, idx, arr) => {
+                quizzes && Object.keys(quizzes).map((key, index) => {
                     const currentQuiz = quizzes[key]
 
                     return (
-                        <Button height="50px" width="100%" fontSize="18">
+                        <Button key={index} height="50px" width="100%" fontSize="18">
                             <Link className="flex justify-between items-center w-full" href={`/quiz/${key}`}>
                                 {currentQuiz.name}
 

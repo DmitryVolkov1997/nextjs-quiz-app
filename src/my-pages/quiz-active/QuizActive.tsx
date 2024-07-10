@@ -7,16 +7,15 @@ import {useQuizzes} from "@/hooks/use-quizzes"
 import {useQuizStore} from "@/stores/quiz.store"
 import Results from "@/components/quiz/results/Results"
 
-interface QuizActive {
-    quizId: string
-}
+  interface QuizActive {
+      quizId: string
+ }
 
 const QuizActive: FC<QuizActive> = ({quizId}) => {
     const {currentQuestion, isFinished, setResults, results, setCurrentQuestion, setIsFinished} = useQuizStore()
     const {data: quizzes} = useQuizzes()
     const currentQuiz = quizzes?.[quizId]?.questions?.[currentQuestion]
     const quizLength = quizzes?.[quizId]?.questions?.length ?? 0
-
     const onClickAnswerId = (answerId: number) => {
         if (!currentQuiz) return
 
@@ -44,9 +43,11 @@ const QuizActive: FC<QuizActive> = ({quizId}) => {
                 <Box className="p-4 rounded-md max-w-2xl w-full" boxShadow="md">
                     {
                         currentQuiz && !isFinished ? (
-                            <QuizCurrent currentQuestion={currentQuiz} currentQuestionIndex={currentQuestion}
+                            <QuizCurrent
+                                currentQuestion={currentQuiz} currentQuestionIndex={currentQuestion}
                                          quizLength={quizLength}
                                          onClickAnswerId={(answerId: number) => onClickAnswerId(answerId)}
+                                setIsFinished={setIsFinished}
                             />
                         ) : isFinished ? (
                             <Results results={results} quizLength={quizLength}/>

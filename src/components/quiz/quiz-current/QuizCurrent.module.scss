@@ -9,3 +9,11 @@
 .answer {
   @apply flex items-center gap-x-4;
 }
+
+.buttons {
+  @apply flex items-center gap-x-1.5 mt-3;
+}
+
+.body {
+  @apply flex items-center gap-x-3;
+}
